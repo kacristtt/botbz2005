@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: blaze-double-bot
+    env: python
+    buildCommand: pip install -r requirements.txt && playwright install
+    startCommand: python blaze_bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 8047337853:AAGizHiBxQSrrUl8IQw-TX9Zjz86PcJGhlU
+      - key: TELEGRAM_CHAT_ID
+        value: "6821521589"
